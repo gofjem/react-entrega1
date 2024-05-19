@@ -15,7 +15,8 @@ import {
     Heading,
     Center
   } from '@chakra-ui/react'
-  import { FaChevronDown } from "react-icons/fa";
+  import { IoMdMenu } from "react-icons/io";
+
 
 
 const NavBar = () => {
@@ -23,8 +24,8 @@ const NavBar = () => {
     <Flex h={'10vh'} w={'100%'} justify={'space-between'} align={'center'} backgroundColor={'#5B2E48'}>
         <Heading fontSize={'x-large'}>Logo</Heading>
         <Menu>
-            <MenuButton as={Button} rightIcon={<FaChevronDown />}>
-                Actions
+            <MenuButton as={Button} rightIcon={<IoMdMenu />}>
+                Menu
             </MenuButton>
             <MenuList>
                 <MenuItem>Download</MenuItem>
