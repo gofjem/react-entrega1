@@ -13,26 +13,38 @@ import {
     Button,
     Flex,
     Heading,
-    Center
+    Center,
+    Image
   } from '@chakra-ui/react'
   import { IoMdMenu } from "react-icons/io";
+import { Link } from 'react-router-dom';
+import logo from '../../assets/logo.png'
 
 
 
 const NavBar = () => {
   return (
     <Flex h={'10vh'} w={'100%'} justify={'space-between'} align={'center'} backgroundColor={'#5B2E48'}>
-        <Heading fontSize={'x-large'}>Logo</Heading>
+        <Heading fontSize={'x-large'} m={3}>
+          <Link to='/'>
+            <Image w={'15%'} src={logo}/>
+          </Link></Heading>
         <Menu>
             <MenuButton as={Button} rightIcon={<IoMdMenu />}>
-                Menu
+                Categorias
             </MenuButton>
             <MenuList>
-                <MenuItem>Download</MenuItem>
-                <MenuItem>Create a Copy</MenuItem>
-                <MenuItem>Mark as Draft</MenuItem>
-                <MenuItem>Delete</MenuItem>
-                <MenuItem>Attend a Workshop</MenuItem>
+                <MenuItem>
+                <Link to='/categorias/Remeras'>Remeras</Link>
+                </MenuItem>
+                <MenuItem>
+                <Link to='/categorias/Buzos'>Buzos</Link>
+                </MenuItem>
+                <MenuItem>
+                <Link to='/categorias/Pijamas'>Pijamas</Link>
+                </MenuItem>
+                <MenuItem>
+                <Link to='/categorias/Zapatillas'>Zapatillas</Link></MenuItem>
             </MenuList>
         </Menu>
         <CartWidget/>
